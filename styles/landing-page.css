@@ -1,0 +1,148 @@
+/* Section 1 - Hello World */
+.hello-world {
+    width: 100%;
+    height: 50vh;
+    background-color: #fff;
+    border-bottom: 2px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello-world text {
+    font-size: 5rem;
+}
+
+/* Section 2 - Projects */
+.projects {
+    width: 100vw;
+    padding: 10vh 0 10vh 0;
+    display: grid;
+    grid-template-areas: "project1 project2"
+                         "project3 project4"
+}
+
+.projects-item {
+    height: 30vh;
+    width: 30vw;
+    background-color: #fff;
+
+    justify-self: center;
+    margin: 1vh 0 1vh 0;    
+
+    border-radius: 20px;
+    border: 2px solid #86f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    color: #7040ff;
+    text-decoration: none;
+}
+
+.projects-item:hover {
+    background-color: #86f;
+    color: #fff;
+    border-color: #000;
+}
+
+/* Section 3 - Technologies */
+
+.technologies {
+    height: 45vh;
+    background-color: #7040ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: #fff;
+}
+
+.technologies-box {
+    width: 50vw;
+    height: 20vh;
+    background-color: #fff;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-areas:"html css js";
+}
+
+.technologies-box-item {
+    align-self: center;
+    justify-self: center;
+    list-style: none;
+
+    border: 2px solid #000;
+    border-radius: 10px 0 10px 0;    
+    padding: 1rem;
+
+    background-color: #777;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#technologies-html {
+    color: #ffa500;
+    border-color: #ffa500;
+}
+
+#technologies-css {
+    color: #00f;
+    border-color: #00f;
+}
+
+#technologies-js {
+    color: #ff0;
+    border-color: #ff0
+}
+
+/* Section 4 - Our Team */
+
+.about-us {
+    height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-container {
+    display: grid;
+    grid-row-gap: 2rem;
+    row-gap: 2rem;
+    grid-column-gap: 4rem;
+    column-gap: 4rem;
+
+    grid-template-areas: "profile1 profile2 profile3"
+                         "profile4 profile5 profile6";
+}
+
+.about-us-container-profiles {
+    height: 30vh;
+    padding: 6rem 2rem 6rem 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid #86f;
+}
+
+.about-us-container-profiles img {
+    height: 20vh;
+    border-radius: 200px;
+    margin-bottom: 2vh;
+}
+
+.about-us-container-profiles * {
+    font-size: 1.4rem;
+    color: #86f;
+}
