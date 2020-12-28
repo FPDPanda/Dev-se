@@ -1,16 +1,34 @@
 /* Section 1 - Hello World */
+*{
+    font-family: 'system-ui', Arial, sans-serif;
+}
+body,html{
+    font-size: 16px;
+	background-color: #6736fa;
+	overflow-x: hidden;
+
+}
+
 .hello-world {
+    clear: both;
     width: 100%;
-    height: 50vh;
-    background-color: #fff;
-    border-bottom: 2px solid #444;
+    height: 40vh;
+    background-color: #7040ff;
+    border-bottom: 2px solid rgb(165, 165, 165);
     display: flex;
     justify-content: center;
     align-items: center;
+	text-align: center;
+	
+    
 }
 
-.hello-world text {
-    font-size: 5rem;
+.hello-world h1 {
+    font-size: 3rem;
+    margin-top: 7%;
+    font-family: 'system-ui', 'Times New Roman', Times, serif;
+    color: white;
+
 }
 
 /* Section 2 - Projects */
@@ -51,98 +69,254 @@
 /* Section 3 - Technologies */
 
 .technologies {
-    height: 45vh;
+    min-height: 45vh;
+    height: auto;
     background-color: #7040ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    font-size: 2rem;
+    padding: 5%;
+}
+.technologies h1{
     color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .technologies-box {
     width: 60%;
-    height: 60%;
-    background-color: #fff;
+    height: auto;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
-
-    display: grid;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
     grid-template-areas:"html css js";
+    flex-wrap: wrap;
+    
 }
 
 .technologies-box-item {
-    align-self: center;
-    justify-self: center;
     list-style: none;
-
-    border: 2px solid #000;
+    width: 20%;
+    min-width: 120px;
+    margin: 5%;
     border-radius: 10px 0 10px 0;    
-    padding: 1rem;
-
-    background-color: #777;
+    line-height: 4em;
+    float: left;
+    text-align: center;
     color: #fff;
     font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
 }
 
 #technologies-html {
-    color: #ffa500;
-    border-color: #ffa500;
+    color: #ff8800;
+    background-color: rgb(255, 215, 169);
+    letter-spacing: 2px;
+
 }
 
 #technologies-css {
-    color: #00f;
-    border-color: #00f;
+    color: #040477;
+    letter-spacing: 2px;
+    background-color: rgb(129, 129, 255);
 }
 
 #technologies-js {
-    color: #ff0;
-    border-color: #ff0
+    color: rgb(122, 110, 1);
+    letter-spacing: 2px;
+    background-color: rgb(255, 247, 172);
 }
 
 /* Section 4 - Our Team */
 
-.about-us {
-    height: 70vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .about-us-container {
-    display: grid;
-    grid-row-gap: 2rem;
-    row-gap: 2rem;
-    grid-column-gap: 4rem;
-    column-gap: 4rem;
+    padding-top: 5%;
+    background-color: #8f6aff;
 
-    grid-template-areas: "profile1 profile2 profile3"
-                         "profile4 profile5 profile6";
+    z-index: -1;
 }
+.about-us-container h1{
+    font-size: 3rem;
+    margin-top: 7%;
+    font-family: 'system-ui', 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+	margin: 5%;
+	position: relative;
 
+}
 .about-us-container-profiles {
-    height: 30vh;
-    padding: 6rem 2rem 6rem 2rem;
-
+    
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 30px;
     border: 2px solid #86f;
+    width: 30%;
+    height: 30%;
+    float: left;
+	margin: 5% 5% 5% 8%;
+    
 }
+
 
 .about-us-container-profiles img {
-    height: 20vh;
+    height: 80%;
+    width: 80%;
     border-radius: 200px;
+    border: 5px solid #86f;
     margin-bottom: 2vh;
+   
 }
-
-.about-us-container-profiles * {
+.about-us-container-profiles text {
+    height: 20%;
     font-size: 1.4rem;
     color: #86f;
+    font-weight: bold;
+    padding: 5% 0 0 0;
+}
+#section5{
+	width: 100vw;
+	height: auto;
+	clear: both;
+	padding: 2%;
+	padding-bottom: .5%;
+	margin: 0;
+	background-color : black;
+}
+
+.realfooter{
+	clear: both;
+	width: 100%;
+	height: auto;
+	color: white;
+}
+
+
+.realfooter h1{
+	font-size: 1.5rem;
+	margin: 0 auto;
+	padding-bottom: 1%;
+}
+.contacts{
+	width: 90%;
+	height: 100px;
+	
+}
+.contato{
+	
+	font-size:.7rem;
+	color: white;
+	min-width: 150px;
+	width: 20%;
+	margin: .5%;
+	padding-left: 2rem;
+	line-height: 1rem;
+	float: left;
+	font-family: monospace, 'Times New Roman', Times, serif;
+	
+}
+.made{
+	text-align: center;
+	clear: both;
+	width: 50%;
+	margin: 2% auto;
+	font-size: .7rem;
+	color: white;
+	letter-spacing: 5px;
+	font-weight: bold;
+	margin-top: 5%;
+}
+
+@media (min-height: 900px){
+
+    header nav ul li a{
+
+      
+        font-size: 1.5rem;
+    }
+
+    body,html{
+        font-size: 18px;
+    }
+       
+}
+
+@media (max-width: 1250px) and (min-height: 900px){   
+	#navbar{
+    display: none;
+    }
+    #hamburger{
+    display: block;
+    
+    }
+    .stickers{
+        top: -12px;
+    }
+}
+
+
+@media (max-width: 900px) and (max-height: 700px){
+    
+    #navbar{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+}
+
+@media (max-width: 800px) and (max-height: 1100px){    
+	.about-us-container-profiles {
+
+        width: 80%;
+
+
+    }
+}
+@media (max-width: 1100px){
+		
+    .about-us-container-profiles {
+		float: left;
+		width: 80%;
+		margin-left: 5%;
+
+
+    }
+    #navbar{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+
+}
+@media (max-width: 500px){
+    body,html{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 420px){
+    body,html{
+        font-size: 12px;
+	}
+	
+	.about-us-container-profiles {
+
+        width: 70%;
+		margin: 5% auto;
+		margin-left: 7%;
+
+    }
+    
 }
