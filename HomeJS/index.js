@@ -3,6 +3,8 @@ var menuOpen = false
 function fecharMenu(){
     document.getElementById('hamburger').classList.remove('clicked')
     document.getElementById('hamb-navbar').classList.remove('clicked')
+    document.getElementById('html').classList.remove('hiddenof')
+    document.body.classList.remove('hiddenof')
     console.log('removeu')
     menuOpen = false
 }
