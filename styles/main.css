@@ -115,7 +115,7 @@ header{
     right: 7.6%;
     top: 3%;
 }
-body.hiddenof{
+html.hiddenof, body.hiddenof{
     overflow: hidden;
 }
 
