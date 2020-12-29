@@ -4,9 +4,46 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="./javascript/regras.js"></script>
+        <!-------------------------- Arquivos necessarios para as regras --------------------------------->
+        <link rel="stylesheet" href="./css/regras.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Langar&display=swap" rel="stylesheet">
+        <!-------------------------- FIM necessarios para as regras ------------------------------------->
         <title>Document</title>
     </head>
     <body>
-        
+        <!-- Colocar a id #containerGame no container principal se quiser que a div das regras apareça sozinha -->
+        <div id="containerGame">
+            
+        </div>
+
+
+        <!-------------------------------- Call de regras ------------------------------------------------------>
+        <button id='callRegras' onclick="callRegras()">Regras</button>
+
+        <div id='container-rules-id' class="container-rules">
+            <button onclick='closeRegras()' id="botaorules">
+                <div id="imgBtn">
+                    <img src="assets/xx.png" alt="Close rules">
+                </div>
+            </button>
+
+            <h1>Regras</h1>
+            <ul id='rules'>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quisquam enim ipsa a. Culpa mollitia blanditiis architecto et est sint earum sit. Distinctio accusantium illum dolore libero aliquid laudantium tenetur.
+                </li>
+
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quisquam enim ipsa a. Culpa mollitia blanditiis architecto et est sint earum sit. Distinctio accusantium illum dolore libero aliquid laudantium tenetur.
+                </li>
+
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quisquam enim ipsa a. Culpa mollitia blanditiis architecto et est sint earum sit. Distinctio accusantium illum dolore libero aliquid laudantium tenetur.
+                </li>
+
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quisquam enim ipsa a. Culpa mollitia blanditiis architecto et est sint earum sit. Distinctio accusantium illum dolore libero aliquid laudantium tenetur.
+                </li>
+            </ul>
+           
+        </div>
+        <!-------------------------------- Fim de regras ------------------------------------------------------->
     </body>
 </html>
