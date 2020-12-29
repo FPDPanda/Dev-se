@@ -74,6 +74,7 @@ header{
     right: 7%;
     top: 3%;
     cursor: pointer;
+    will-change: auto;
 }
 .stickers{
     position: absolute;
