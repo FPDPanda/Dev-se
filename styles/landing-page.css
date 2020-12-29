@@ -1,14 +1,4 @@
 /* Section 1 - Hello World */
-*{
-    font-family: 'system-ui', Arial, sans-serif;
-}
-body,html{
-    font-size: 16px;
-	background-color: #6736fa;
-	overflow-x: hidden;
-
-}
-
 .hello-world {
     clear: both;
     width: 100%;
