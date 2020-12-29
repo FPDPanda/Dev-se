@@ -4,13 +4,8 @@
     width: 100%;
     height: auto;
     margin-top: 15vh;
-    margin-bottom: 10vh;
     background-color: #7040ff;
     border-bottom: 2px solid rgb(165, 165, 165);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
 	text-align: center;
 	padding: 5% 0;
     
