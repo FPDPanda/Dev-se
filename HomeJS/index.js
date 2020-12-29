@@ -1,4 +1,3 @@
-
 var menuOpen = false
 function fecharMenu(){
     document.getElementById('hamburger').classList.remove('clicked')
