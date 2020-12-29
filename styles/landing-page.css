@@ -251,11 +251,10 @@ body,html{
 
 @media (max-width: 1250px) and (min-height: 900px){   
 	#navbar{
-    display: none;
+    	display: none;
     }
     #hamburger{
-    display: block;
-    
+    	display: block;
     }
     .stickers{
         top: -12px;
