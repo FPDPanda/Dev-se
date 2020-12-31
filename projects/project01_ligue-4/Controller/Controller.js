@@ -32,13 +32,19 @@ class Controller{
     movePipeEL(el){
         this.pipe.style.left=el.offsetLeft+(el.offsetWidth/2-this.pipe.offsetWidth/2)+"px"
     }
-    toggle(bolean){return bolean?false:true}
+    validateCreation(path){
+        let val=0
+        path[0].childNodes.forEach(e=>{
+            val+=document.querySelector("."+this.ball.nameClass).offsetHeight
+        })
+        return val>=path[0].offsetTop?false:true
+    }
     listener(tag){
         if(tag){
             tag.forEach(el => {
                 el.addEventListener("click",e=>{
                 this.movePipeEL(e.path[0])
-                new Ball(this.createEl(this.parentEl,this.ball.element,"class",this.ball.nameClass),e.path[0],this.ball.fallSpeed,this.ball.timeToAppear)
+                this.validateCreation(e.path)?new Ball(this.createEl(this.parentEl,this.ball.element,"class",this.ball.nameClass),e.path[0],this.ball.fallSpeed,this.ball.timeToAppear):0
                 })
             }); 
         
