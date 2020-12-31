@@ -169,7 +169,7 @@
 
 #section5 {
   width: 100vw;
-  height: auto;
+  height: 40vh;
   clear: both;
   padding: 2%;
   padding-bottom: 0.5%;
@@ -184,7 +184,7 @@
   color: white;
 }
 
-.realfooter h1 {
+.realfooter h3 {
   font-size: 1.5rem;
   margin: 2% auto;
   display: inline-block;
@@ -209,16 +209,10 @@
   font-family: monospace, "Times New Roman", Times, serif;
 }
 
-.made {
-  text-align: center;
-  clear: both;
-  width: 50%;
-  margin: 2% auto;
+.link {    
   font-size: 0.7rem;
   color: white;
-  letter-spacing: 5px;
-  font-weight: bold;
-  margin-top: 20%;
+  text-decoration: none;
 }
 
 @media (min-height: 900px) {
