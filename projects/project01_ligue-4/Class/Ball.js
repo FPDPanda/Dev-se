@@ -1,17 +1,18 @@
 class Ball{
-    constructor(bolinha,parent,fallSpeed,timeToAppear){
-        this.bolinha=bolinha
+    constructor(ball,parent,fallSpeed,timeToAppear,nameP){
+        this.ball=ball
+        this.nameP=nameP
         this.parent=parent
         this.fallSpeed=fallSpeed
         this.timeToAppear=timeToAppear
-        this.move(this.bolinha,this.parent,this.fallSpeed,this.timeToAppear)
+        this.move(this.ball,this.parent,this.fallSpeed,this.timeToAppear)
     }
     move(el,parent,fallSpeed,timeToAppear){
         let cont=0
         let height=0
         //this.bolinha.style.background=this.toggleColor(this.bolinha.style.background)
         parent.childNodes.length?parent.childNodes.forEach(b=>{height+=el.offsetHeight}):0
-        parent.innerHTML+=`<p class="${el.style.background}"></p>`
+        parent.innerHTML+=`<p class="${this.nameP}"></p>`
         el.style.opacity="0"
         
         setTimeout(()=>{
