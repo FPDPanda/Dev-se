@@ -20,30 +20,11 @@ class Controller{
         return result;
     }
     checksWinner(){
-        let data=[0,0,'',false];
-        let running=true;
-        //VERTICAL
-        for(let l=0;l<this.allColumns.length;l++){
-            for(let c=0;c<this.allColumns[l].childNodes.length;c++){
-                if(this.allColumns[l].childNodes[c].className==this.nameBall(this.ball.toggleColor[0])){data[0]+=1;data[2]=this.nameBall(this.ball.toggleColor[0])}else data[0]=0
-                if(this.allColumns[l].childNodes[c].className==this.nameBall(this.ball.toggleColor[1])){data[1]+=1;data[2]=this.nameBall(this.ball.toggleColor[1])}else data[1]=0
-                if(data[0]>3&&this.countChildren(this.allColumns[l].childNodes,data[2])>3||data[1]>3&&this.countChildren(this.allColumns[l].childNodes,data[2])>3){running=false;data[3]=true;break}
-            }
-            if(!running)break
-        }
-        //HORIZONTAL
-       /*  if(!data[3]){
-            data=[0,0,'',false];
-            for(let l=0;l<this.allColumns.length;l++){
-                if(this.allColumns[l].childNodes.length>3){
-                    console.log(this.allColumns[l])
-                }
-                else{
-                    //console.log(col)
-                }
-            }
-        } */
-        console.log(data)
+        this.allColumns.forEach((l,i)=>{
+            l.childNodes.forEach((b,c)=>{
+                console.log(`Na posição ${i},${c} tem ${b.classList.value}`)
+            })
+        })
     }
     nameBall(name){
         return name.search("#")>-1?name.replace("#","p"):name.replace(/[(0-9)\(\)\,\#]/ig,'')
