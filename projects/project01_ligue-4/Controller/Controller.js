@@ -50,7 +50,7 @@ class Controller{
         path[0].childNodes.forEach(e=>{
             val+=document.querySelector("."+this.ball.nameClass).offsetHeight
         })
-        return val>=path[0].offsetTop?false:true
+        return val>=path[0].offsetHeight?false:true
     }
     listener(tag){
         if(tag){
