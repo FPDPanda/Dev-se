@@ -21,7 +21,20 @@ header {
 #title {
     width: 60%;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: clamp(50px, 3.5rem, 4vw);
+}
+
+#callRegras {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    color: #000;
+    background-color: #fff;
+}
+
+#callRegras:hover {
+    color: #fff;
+    background-color: #000;
 }
 
 #containerGame {
