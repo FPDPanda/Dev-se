@@ -7,7 +7,6 @@ class Controller{
         this.btnReset=conf.btnReset
         this.contBall=0
         this.colorBall=this.ball.toggleColor[0]
-        this.nameBall;
         this.runningGame=true;
         //METHODS
         this.listener(this.allColumns)
