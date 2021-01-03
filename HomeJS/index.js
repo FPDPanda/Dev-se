@@ -7,6 +7,7 @@ function fecharMenu(){
     console.log('removeu')
     menuOpen = false
 }
+
 //Corrige um bug onde se eu abrir o menu e redimensionar a tela o menu continua sendo mostrado
 window.addEventListener('resize', function(){
     if (window.innerWidth > 1100 && menuOpen === true){
