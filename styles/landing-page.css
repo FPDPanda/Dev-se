@@ -4,6 +4,7 @@
   height: 30vh;
   background-color: rgb(36, 36, 36);
   margin-top: 15vh;
+  padding: 10vh 0;
 
   display: flex;
   justify-content: center;
@@ -19,7 +20,7 @@
 /* Section 2 - Projects */
 .projects {
   width: 100vw;
-  padding: 10vh 0;
+  padding: 15vh 0;
   background: linear-gradient(rgb(36, 36, 36) 0%, rgb(101, 38, 250) 100%); 
 
   display: grid;
@@ -64,12 +65,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 15vh 0;
 }
 
 .technologies h1 {
+  font-family: "system-ui", "Times New Roman", Times, serif;
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -77,6 +79,7 @@
   width: 60%;
   height: auto;
   padding: 5%;
+  margin-top: 5vh;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   display: flex;
