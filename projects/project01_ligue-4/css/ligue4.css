@@ -11,13 +11,11 @@ header {
     grid-area: header;
 
     width: 100vw;
-    height: clamp(6vh, 150px, 12vh);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-/* 14vh 150px 8vh*/
 #title {
     width: 60%;
     text-align: center;
@@ -45,4 +43,15 @@ header {
     width: 80vw;
     height: 80vh;
     margin-bottom: 4vh;
+}
+
+@media (max-width: 450px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    #callRegras {
+        margin-top: 3vh;
+    }
 }
