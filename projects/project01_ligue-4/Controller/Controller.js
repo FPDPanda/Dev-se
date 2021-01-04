@@ -46,17 +46,17 @@ class Controller{
     toggle(bolean){return bolean?false:true}
     validateCreation(path){
         let val=0
-        path[0].childNodes.forEach(e=>{
+        path.childNodes.forEach(e=>{
             val+=document.querySelector("."+this.ball.nameClass).offsetHeight
         })
-        return val>=path[0].offsetHeight?false:true
+        return val>=path.offsetHeight?false:true
     }
     listener(tag){
         if(tag){
             tag.forEach(el => {
                 el.addEventListener("click",e=>{
-                this.movePipeEL(e.path[0])
-                this.validateCreation(e.path)&&this.runningGame?new Ball(this.createEl(this.parentEl,this.ball.element,"class",this.ball.nameClass),e.path[0],this.ball.fallSpeed,this.ball.timeToAppear,this.nameBall(this.colorBall)):0
+                this.movePipeEL(e.target)
+                this.validateCreation(e.target)&&this.runningGame?new Ball(this.createEl(this.parentEl,this.ball.element,"class",this.ball.nameClass),e.target,this.ball.fallSpeed,this.ball.timeToAppear,this.nameBall(this.colorBall)):0
                 this.checksWinner()
                 })
             }); 
