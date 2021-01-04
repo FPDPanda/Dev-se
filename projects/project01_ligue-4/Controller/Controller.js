@@ -75,14 +75,6 @@ class Controller{
             loop=setInterval(()=>{
                 let ball = document.querySelector("."+this.ball.nameClass)?document.querySelectorAll("."+this.ball.nameClass):0
                 ball?ball[ball.length-1].style.left=this.pipe.offsetLeft+((this.pipe.offsetWidth/2)-(ball[ball.length-1].offsetWidth/2))+"px":0
-                /*
-                
-                PARA PEGAR A POSIÇÃO DA BOLINHA BASTA RETIRAR O COMENTARIO E OBSERVAR A IMPRESSÃO NO DEVTOOLS
-    
-                */
-    
-               
-                
         },100)
         }else clearInterval(loop)
    }
