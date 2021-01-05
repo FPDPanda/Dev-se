@@ -6,7 +6,8 @@
     color: #000;
 }
 
-body {
+body,
+html {
     background-color: #eee;
     overflow-x: hidden;
 }
