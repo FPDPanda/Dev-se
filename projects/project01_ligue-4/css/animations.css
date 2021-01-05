@@ -1,17 +1,22 @@
 /*Blink animation*/
 .blink {
-  animation: blink-animation 0.4s steps(5, start) infinite;
-  -webkit-animation: blink-animation 0.4s steps(5, start) infinite;
-  color: yellow;
+  animation: blink-animation 0.5s steps(5, start) infinite;
+  -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
 }
 
 @keyframes blink-animation {
+  from {
+    color: yellow;
+  }
   to {
     color: blue;
   }
 }
 
 @-webkit-keyframes blink-animation {
+  from {
+    color: yellow;
+  }
   to {
     color: blue;
   }

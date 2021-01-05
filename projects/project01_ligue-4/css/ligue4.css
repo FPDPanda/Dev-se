@@ -36,6 +36,23 @@ header {
   background-color: #000;
 }
 
+#winner {
+  display: none;
+  border-radius: 20px;
+
+  color: white;
+  font-size: clamp(2rem, 30px, 80px);;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 20vh;
+  background-color: #000;
+}
+
 #containerGame {
   grid-area: game;
   justify-self: center;

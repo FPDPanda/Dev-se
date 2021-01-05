@@ -9,11 +9,25 @@ class Controller {
     this.colorBall = this.ball.toggleColor[0];
     this.runningGame = true;
     //METHODS
+    this.gameFinished();
     this.listener(this.allColumns);
     this.mainLoop();
     this.btnReset.addEventListener("click", (e) => {
       this.reset();
     });
+  }
+  gameFinished(result){
+    if(result) {
+      document.getElementById('winner').style.display ='flex'
+    }
+
+    if (result === 'yellow') {
+      document.getElementById('winner').textContent = 'Yellow player won!'
+    } else if (result === 'blue') {
+      document.getElementById('winner').textContent = 'Blue player won!'
+    } else if (result === 'tie') {
+      document.getElementById('winner').textContent = 'The game tied!'
+    }
   }
   pushMatrix() {
     this.allColumns.forEach((l, i) => {
@@ -97,8 +111,8 @@ class Controller {
     this.mainLoop();
     this.matrix = [[], [], [], [], [], [], []];
   }
-  mainLoop() {
-    let loop;
+  mainLoop() {      
+        let loop;
     if (this.runningGame) {
       loop = setInterval(() => {
         let ball = document.querySelector("." + this.ball.nameClass)
@@ -113,6 +127,8 @@ class Controller {
               "px")
           : 0;
       }, 100);
+    
+      document.getElementById('winner').style.display ='none'
     } else {
       clearInterval(loop);
     }
