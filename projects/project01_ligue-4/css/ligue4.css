@@ -38,10 +38,18 @@ header {
 #containerGame {
     grid-area: game;
     justify-self: center;
+    position: relative;
 
-    background-color: red;
-    width: 80vw;
-    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url(../images/background/board.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 980px;
+    height: 700px;
     margin-bottom: 4vh;
 }
 
