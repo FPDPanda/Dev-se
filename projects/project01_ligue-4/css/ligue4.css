@@ -1,0 +1,57 @@
+body {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 'header'
+                         'game';
+    row-gap: 2vh;
+    justify-content: center;
+}
+
+header {
+    grid-area: header;
+
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title {
+    width: 60%;
+    text-align: center;
+    font-size: clamp(50px, 3.5rem, 4vw);
+}
+
+#callRegras {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    color: #000;
+    background-color: #fff;
+}
+
+#callRegras:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#containerGame {
+    grid-area: game;
+    justify-self: center;
+
+    background-color: red;
+    width: 80vw;
+    height: 80vh;
+    margin-bottom: 4vh;
+}
+
+@media (max-width: 450px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    #callRegras {
+        margin-top: 3vh;
+    }
+}

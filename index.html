@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id='html'>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevTeam</title>
+    <title>Dev-se</title>
 
-
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/landing-page.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/landing-page.css" />
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,46 +19,74 @@
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" 
       rel="stylesheet"
     /> 
+    <script src="./HomeJS/index.js"></script>
   </head>
 
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar">
+    <header class="header">
 
         <!-- Left side (Icon) -->
-        <img id="navbar-logo" src="images/icons/code-angle-brackets.png">
+        <a href ="#section1" id="header-logo"><img src="images/icons/code-angle-brackets.png"></a>
 
         <!-- Right side (Links)-->
-        <div class="navbar-links">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+       <nav id='navbar'>
+            <ul class="list menu">
+                <li>
+                    <a class="active" href="#section1">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section2">Projetos</a>
+                <li>
+                    <a href="#section2">Projetos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section3">Technologias</a>
+                <li>
+                    <a href="#section3">Tecnologias</a>
                 </li>                
-                <li class="nav-item">
-                    <a class="nav-link" href="#section4">Nosso Time</a>
+                <li>
+                    <a href="#section4">Nossa Equipe</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section5">Contato</a>
+                <li>
+                    <a href="#section5">Contato</a>
                 </li>
             </ul>
-        </div>
+        </nav>
 
+        <div onclick='openMenu()' id="hamburger">
+            <div class="stickers">
+                <span id='div1menu'></span>
+                <span id='div2menu'></span>
+                <span id='div3menu'></span>
+            </div>
+        </div>
+    </header>
+    <!-- Section 01 - Hello world-->
+
+    <nav id='hamb-navbar'>
+        <ul class="list menu">
+            <li>
+                <a class="active" href="#section1">Home</a>
+            </li>
+            <li>
+                <a href="#section2">Projetos</a>
+            </li>
+            <li>
+                <a href="#section3">Tecnologias</a>
+            </li>                
+            <li>
+                <a href="#section4">Nossa Equipe</a>
+            </li>
+            <li>
+                <a href="#section5">Contato</a>
+            </li>
+        </ul>
     </nav>
 
-    <!-- Section 01 - Hello world-->
-    <div class="hello-world">
-        <text>Hello, world!</text>
+    <div class="hello-world" id="section1">
+        <h1>Hello, world!</h1>
     </div>
 
     <!-- Section 02 - Links to Projects -->
     <div class="projects" id="section2">
-        <a href = "#" class="projects-item" id="project1">Ligue-4</a>
+        <a href = "./projects/project01_ligue-4/ligue4.html" class="projects-item" id="project1">Ligue-4</a>
         <a href = "#" class="projects-item" id="project2">Projeto 2</a>
         <a href = "#" class="projects-item" id="project3">Projeto 3</a>
         <a href = "#" class="projects-item" id="project4">Projeto 4</a>
@@ -66,7 +94,7 @@
 
     <!-- Section 03 Technologies -->
     <div class="technologies" id="section3">
-        Main Technologies
+        <h1>Technologias Principais</h1>
         <ul class="technologies-box" >
             <li class="technologies-box-item" id="technologies-html">HTML5</li>
             <li class="technologies-box-item" id="technologies-css">CSS3</li>
@@ -75,36 +103,76 @@
     </div>
 
     <!-- Section 04  Our Team-->
-    <div class="about-us" id="section4">
-        <ul class="about-us-container">
-            <li class="about-us-container-profiles" id="profile1-jean">
+    
+        <div class="about-us-container" id="section4">
+            <h1>Nossa Equipe</h1>
+            <div class="about-us-container-profiles" id="profile1-jean">
                 <img src="images/profiles/jean.jpg"/>
-                <text>Jean Jacques</text>
-            </li>
-            <li class="about-us-container-profiles" id="profile2-rafael">
-                <img src="images/profiles/jean.jpg"/>
-                <text>Rafael</text>
-            </li>
-            <li class="about-us-container-profiles" id="profile3-victor">
+                <text>Wister</text>
+            </div>
+            <div class="about-us-container-profiles" id="profile2-rafael">
                 <img src="images/profiles/jean.jpg"/>
                 <text>Victor</text>
-            </li>
-            <li class="about-us-container-profiles" id="profile4-jhonatan">
+            </div>
+            <div class="about-us-container-profiles" id="profile3-victor">
+                <img src="images/profiles/jean.jpg"/>
+                <text>Jean Jacques</text>
+            </div>
+            <div class="about-us-container-profiles" id="profile4-jhonatan">
                 <img src="images/profiles/jean.jpg"/>
                 <text>Jhonatan</text>
-            </li>
-            <li class="about-us-container-profiles" id="profile5-rodrigo">
+            </div>
+            <div class="about-us-container-profiles" id="profile5-rodrigo">
                 <img src="images/profiles/jean.jpg"/>
                 <text>Rodrigo</text>
-            </li>
-            <li class="about-us-container-profiles" id="profile6-christian">
+            </div>
+            <div class="about-us-container-profiles" id="profile6-christian">
                 <img src="images/profiles/jean.jpg"/>
-                <text>Christian</text>
-            </li>
-        </ul>
-    </div>
+                <text>João</text>
+            </div>
+            <span style="clear: both;"></span>
 
-    <!-- Section 05  -->
-    <div class="" id="section5"></div>
+        <!-- Section 05  -->
+        
+            <div class="" id="section5">
+                <div class="realfooter">
+                    <h3>Contato</h3>
+                    <div class="contacts">
+
+                        <div class="contato">
+                            Nome: Wister<br>
+                            E-mail: wister.sousa2@gmail.com<br> 
+                            Telefone: +55 (63) 98512-2404
+                        </div>
+
+                        <div class="contato">
+                            Nome: Victor<br>
+                            E-mail: viictor.ivan@gmail.com<br> 
+                            Telefone: +55 (81) 98167-1817
+                        </div>
+
+                        <div class="contato">
+                            Nome: Jean<br>
+                            E-mail: jeanjacques7.jj@gmail.com<br> 
+                            Github: <a class="link" href="https://github.com/FPDPanda" target="_blank">github.com/FPDPanda</a>
+                        </div>
+
+                        <div class="contato">
+                            Nome: Jhonatan<br>
+                            E-mail:  jhonatan.serafim@gmail.com<br> 
+                            Telefone: +55 (11) 95159-6731
+                        </div>
+                       
+                        <div class="contato">
+                            Nome: Rodrigo<br>
+                            E-mail: rodrigoloha@gmail.com<br> 
+                            Telefone: +55 (41) 99764-4009
+                        </div>
+
+                    </div>              
+                </div>
+            </div>
+            
+        </div>
   </body>
 </html>

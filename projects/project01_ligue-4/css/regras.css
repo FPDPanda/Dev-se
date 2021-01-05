@@ -1,0 +1,63 @@
+.container-rules{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Langar', cursive;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,-3%);
+    background-color: black;  
+    color: white;
+}
+
+.container-rules h1{
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+}
+
+#rules{
+    padding: 2%;
+    margin: 0 auto;
+    margin-top: 5%;
+    list-style-type: disc;
+}
+
+#rules li{
+    padding: 5% 5% 5% 1%;
+    width: 100%;
+    text-align: left;
+    letter-spacing: .2rem;
+}
+
+#container-rules-id{
+    display: none;    
+}
+
+#container-rules-id.clicked{
+    display: flex;
+}
+
+#botaorules{
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+}
+
+#imgBtn{
+    width: 50px;
+    cursor: pointer;
+}
+
+#imgBtn img{
+    width: 90%;
+    height: 50%;
+}
+
+#callRegras{
+    width: 100px;
+    height: 40px;
+}
