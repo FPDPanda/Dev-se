@@ -11,7 +11,7 @@ class Ball{
         let cont=0
         let height=0
         //this.bolinha.style.background=this.toggleColor(this.bolinha.style.background)
-        parent.childNodes.length?parent.childNodes.forEach(b=>{height+=el.offsetHeight}):0
+        parent.childNodes.length?parent.childNodes.forEach(b=>{height+=el.offsetHeight +20}):0
         parent.innerHTML+=`<p class="${this.nameP}"></p>`
         el.style.opacity="0"
         
