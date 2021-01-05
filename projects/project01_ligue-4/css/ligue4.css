@@ -1,65 +1,65 @@
 body {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    grid-template-areas: 'header'
-                         'game';
-    row-gap: 2vh;
-    justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "header"
+    "game";
+  row-gap: 2vh;
+  justify-content: center;
 }
 
 header {
-    grid-area: header;
+  grid-area: header;
 
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #title {
-    width: 60%;
-    text-align: center;
-    font-size: clamp(50px, 3.5rem, 4vw);
+  width: 60%;
+  text-align: center;
+  font-size: clamp(50px, 3.5rem, 4vw);
 }
 
 #callRegras {
-    border: 2px solid black;
-    border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
 
-    color: #000;
-    background-color: #fff;
+  color: #000;
+  background-color: #fff;
 }
 
 #callRegras:hover {
-    color: #fff;
-    background-color: #000;
+  color: #fff;
+  background-color: #000;
 }
 
 #containerGame {
-    grid-area: game;
-    justify-self: center;
-    position: relative;
+  grid-area: game;
+  justify-self: center;
+  position: relative;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background: url(../images/background/board.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 980px;
-    height: 700px;
-    margin-bottom: 4vh;
+  background: url(../images/background/board.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 980px;
+  height: 700px;
+  margin-bottom: 4vh;
 }
 
 @media (max-width: 450px) {
+  header {
+    flex-direction: column;
+  }
 
-    header {
-        flex-direction: column;
-    }
-
-    #callRegras {
-        margin-top: 3vh;
-    }
+  #callRegras {
+    margin-top: 3vh;
+  }
 }
