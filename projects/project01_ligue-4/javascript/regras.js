@@ -18,7 +18,7 @@ function callRegras(){
 
 function closeRegras(){
     document.getElementById('container-rules-id').classList.remove('clicked')
-    document.getElementById('containerGame').style.display = 'block'
+    document.getElementById('containerGame').style.display = 'flex'
     document.getElementById('header-logo').style.display = 'block'
     document.getElementById('title').style.display = 'block'
 }
