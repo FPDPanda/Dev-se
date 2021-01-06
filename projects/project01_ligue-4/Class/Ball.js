@@ -1,5 +1,6 @@
-class Ball {
+class Ball extends Sounds{
   constructor(ball, parent, fallSpeed, timeToAppear, nameP) {
+    super()
     this.ball = ball;
     this.nameP = nameP;
     this.soundFall= new Audio("sounds/hit.mp3")
@@ -29,8 +30,8 @@ class Ball {
           parent.offsetTop + parent.offsetHeight
         ) {
           clearInterval(loop);
-          this.soundFall.currentTime=0;
-          this.soundFall.play()
+          this.soundBallFall.currentTime=0
+          this.soundBallFall.play()
           height = 0;
         } else {
           el.style.top = cont + "px";
