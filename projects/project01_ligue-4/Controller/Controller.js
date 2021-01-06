@@ -5,7 +5,11 @@ class Controller {
     this.pipe = conf.pipe;
     this.ball = conf.ball;
     this.btnReset = conf.btnReset;
-    this.matrix = [[], [], [], [], [], [], []];
+    this.matrix=[
+        ["","","","","","",""],["","","","","","",""],["","","","","","",""],
+        ["","","","","","",""],["","","","","","",""],["","","","","","",""],
+        ["","","","","","",""]
+      ]
     this.colorBall = this.ball.toggleColor[0];
     this.runningGame = true;
     //METHODS
@@ -21,30 +25,101 @@ class Controller {
       document.getElementById('winner').style.display ='flex'
     }
 
-    if (result === 'yellow') {
+    if (result === this.ball.toggleColor[1]) {
       document.getElementById('winner').textContent = 'Yellow player won!'
-    } else if (result === 'blue') {
+    } else if (result === this.ball.toggleColor[0]) {
       document.getElementById('winner').textContent = 'Blue player won!'
     } else if (result === 'tie') {
       document.getElementById('winner').textContent = 'The game tied!'
     }
   }
-  pushMatrix() {
-    this.allColumns.forEach((l, i) => {
-      l.childNodes.forEach((b, c) => {
-        this.matrix[i].push(b.className);
-        console.log(this.matrix);
-
-        if (this.matrix[i].length >= 4) {
-          console.log("4");
-        }
-        // console.log(`Na posição ${i},${c} tem ${b.classList.value}`)
-      });
-    });
+  pushMatrix(runningGame) {
+    if(runningGame){
+      this.allColumns.forEach((l,i)=>{
+          l.childNodes.forEach((b,c)=>{
+              this.matrix[i][c]=b.classList.value
+              
+          })
+      })
   }
-  checksWinner() {}
+  }
+  checksWinner(){
+    let data=[0,0,'',false];
+        if(!data[3]){
+            for(let l=0;l<this.matrix.length;l++){
+                for(let c=0;c<this.matrix.length;c++){
+                    if(this.matrix[l][c]==this.nameBall(this.ball.toggleColor[0])){data[0]+=1;data[2]=this.ball.toggleColor[0]}else data[0]=0
+                    if(this.matrix[l][c]==this.nameBall(this.ball.toggleColor[1])){data[1]+=1;data[2]=this.ball.toggleColor[1]}else data[1]=0
+                    if(data[0]>3||data[1]>3){data[3]=true;break}
+                }
+                if(data[3])break
+            }
+        }
+        if(!data[3]){
+            data=[0,0,'',false];
+            for(let l=0;l<this.matrix.length;l++){
+                for(let c=0;c<this.matrix.length;c++){
+                    if(this.matrix[c][l]==this.nameBall(this.ball.toggleColor[0])){data[0]+=1;data[2]=this.ball.toggleColor[0]}else data[0]=0
+                    if(this.matrix[c][l]==this.nameBall(this.ball.toggleColor[1])){data[1]+=1;data[2]=this.ball.toggleColor[1]}else data[1]=0
+                    if(data[0]>3||data[1]>3){data[3]=true;break}
+                }
+                if(data[3])break
+            }
+        }
+        //DIAGONAL PRINCIPAL
+        if(!data[3]){
+            data=[0,0,'',false];
+            for(let l=0;l<this.matrix.length;l++){
+                    for(let c=0;c<this.matrix.length;c++){
+                        //matriz quadrada 4x4
+                        if(l<4&&c<4){
+                            for (let i=0;i<4; i++){
+                                if(this.matrix[l+i][c+i]==this.nameBall(this.ball.toggleColor[0])){data[0]+=1;data[2]=this.ball.toggleColor[0]}else data[0]=0
+                                if(this.matrix[l+i][c+i]==this.nameBall(this.ball.toggleColor[1])){data[1]+=1;data[2]=this.ball.toggleColor[1]}else data[1]=0
+                                if(data[0]>3||data[1]>3){data[3]=true;break}
+                            }
+                        }
+                        //-------------------------------
+                        if(data[3])break
+                    }
+                if(data[3])break
+            }
+        }
+        //DIAGONAL SECUNDARIA
+        if(!data[3]){
+            data=[0,0,'',false];
+            for(let l=0;l<this.matrix.length;l++){
+                    for(let c=this.matrix.length-1;c>=0;c--){
+                        //matriz quadrada 4x4
+                        if(l<4&&c>2){
+                            for (let i=0;i<4;i++){
+                                //console.log(`${l+i},${c-i}`)
+                               if(this.matrix[l+i][c-i]==this.nameBall(this.ball.toggleColor[0])){data[0]+=1;data[2]=this.ball.toggleColor[0]}else data[0]=0
+                                if(this.matrix[l+i][c-i]==this.nameBall(this.ball.toggleColor[1])){data[1]+=1;data[2]=this.ball.toggleColor[1]}else data[1]=0
+                                if(data[0]>3||data[1]>3){data[3]=true;break}
+                            }
+                        }
+                        //-------------------------------
+                        if(data[3])break
+                    }
+                if(data[3])break
+            }
+        }
+        //TIE
+        if(!data[3]){
+            data=[0,0,'tie',true];
+            for(let l=0;l<this.matrix.length;l++){
+                for(let c=0;c<this.matrix.length-1;c++){
+                  if(this.matrix[l][c]==""){data[2]="";break}
+                }
+                if(!data[2])break
+            }
+            data[2]==""&&data[3]?data[3]=false:0 
+        }
+        return data[3]?data:false
+  }
   nameBall(name) {
-    return name.search("#") > -1
+    return  name.search("#") > -1
       ? name.replace("#", "p")
       : name.replace(/[(0-9)\(\)\,\#]/gi, "");
   }
@@ -92,8 +167,8 @@ class Controller {
                 this.nameBall(this.colorBall)
               )
             : 0;
-          this.pushMatrix();
-          this.checksWinner();
+          this.pushMatrix(this.runningGame);
+          if(this.runningGame&&this.checksWinner()[3]){setTimeout(()=>{this.runningGame=false;this.gameFinished(this.checksWinner()[2])},1000)};
         });
       });
     }
@@ -108,29 +183,31 @@ class Controller {
       });
     });
     this.runningGame = true;
+    for(let l=0;l<this.matrix.length;l++){for(let c=0;c<this.matrix.length;c++){this.matrix[l][c]="";}}
+    document.getElementById('winner').style.display ='none'
     this.mainLoop();
-    this.matrix = [[], [], [], [], [], [], []];
   }
   mainLoop() {      
-        let loop;
-    if (this.runningGame) {
+      let loop;
       loop = setInterval(() => {
+        if (this.runningGame) {
         let ball = document.querySelector("." + this.ball.nameClass)
           ? document.querySelectorAll("." + this.ball.nameClass)
           : 0;
 
-        ball
+        ball&&ball[ball.length - 1].offsetTop<this.pipe.offsetTop+this.pipe.offsetHeight
           ? (ball[ball.length - 1].style.left =
               this.pipe.offsetLeft +
               (this.pipe.offsetWidth / 2 -
                 ball[ball.length - 1].offsetWidth / 2) +
               "px")
           : 0;
+          
+       } else {
+          clearInterval(loop);
+        } 
       }, 100);
     
-      document.getElementById('winner').style.display ='none'
-    } else {
-      clearInterval(loop);
-    }
+    
   }
 }
