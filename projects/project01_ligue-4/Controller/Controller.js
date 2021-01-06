@@ -168,7 +168,7 @@ class Controller {
               )
             : 0;
           this.pushMatrix(this.runningGame);
-          if(this.runningGame&&this.checksWinner()[3]){setTimeout(()=>{this.runningGame=false;this.gameFinished(this.checksWinner()[2])},1000)};
+          if(this.runningGame&&this.checksWinner()[3]){setTimeout(()=>{this.runningGame=false;this.gameFinished(this.checksWinner()[2])},150)};
         });
       });
     }
