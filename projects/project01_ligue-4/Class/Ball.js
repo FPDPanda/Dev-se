@@ -2,6 +2,7 @@ class Ball {
   constructor(ball, parent, fallSpeed, timeToAppear, nameP) {
     this.ball = ball;
     this.nameP = nameP;
+    this.soundFall= new Audio("sounds/hit.mp3")
     this.parent = parent;
     this.fallSpeed = fallSpeed;
     this.timeToAppear = timeToAppear;
@@ -28,6 +29,8 @@ class Ball {
           parent.offsetTop + parent.offsetHeight
         ) {
           clearInterval(loop);
+          this.soundFall.currentTime=0;
+          this.soundFall.play()
           height = 0;
         } else {
           el.style.top = cont + "px";
