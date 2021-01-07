@@ -117,6 +117,7 @@ class Controller {
           }
           //-------------------------------
           if (data[3]) break;
+          data[0]=0;data[1]=0;
         }
         if (data[3]) break;
       }
@@ -152,6 +153,7 @@ class Controller {
           }
           //-------------------------------
           if (data[3]) break;
+          data[0]=0;data[1]=0;
         }
         if (data[3]) break;
       }
