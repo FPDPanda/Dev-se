@@ -3,7 +3,6 @@ class Ball extends Sounds{
     super()
     this.ball = ball;
     this.nameP = nameP;
-    this.soundFall= new Audio("sounds/hit.mp3")
     this.parent = parent;
     this.fallSpeed = fallSpeed;
     this.timeToAppear = timeToAppear;
