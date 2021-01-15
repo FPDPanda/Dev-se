@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id='html'>
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,117 +15,112 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
       rel="stylesheet"
     />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
-    /> 
+    />
     <script src="./HomeJS/index.js"></script>
   </head>
 
   <body>
     <!-- Nav Bar -->
     <header class="header">
+      <!-- Left side (Icon) -->
+      <a href="#section1" id="header-logo"
+        ><img src="images/icons/code-angle-brackets.png"
+      /></a>
 
-        <!-- Left side (Icon) -->
-        <a href ="#section1" id="header-logo"><img src="images/icons/code-angle-brackets.png"></a>
+      <!-- Right side (Links)-->
+      <nav id="navbar">
+        <ul class="list menu">
+          <li>
+            <a class="active" href="#section1">Home</a>
+          </li>
+          <li>
+            <a href="#section2">Projetos</a>
+          </li>
+          <li>
+            <a href="#section3">Tecnologias</a>
+          </li>
+          <li>
+            <a href="#section4">Nossa Equipe</a>
+          </li>
+          <li>
+            <a href="#section5">Contato</a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Right side (Links)-->
-       <nav id='navbar'>
-            <ul class="list menu">
-                <li>
-                    <a class="active" href="#section1">Home</a>
-                </li>
-                <li>
-                    <a href="#section2">Projetos</a>
-                </li>
-                <li>
-                    <a href="#section3">Tecnologias</a>
-                </li>                
-                <li>
-                    <a href="#section4">Nossa Equipe</a>
-                </li>
-                <li>
-                    <a href="#section5">Contato</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div onclick='openMenu()' id="hamburger">
-            <div class="stickers">
-                <span id='div1menu'></span>
-                <span id='div2menu'></span>
-                <span id='div3menu'></span>
-            </div>
+      <div onclick="openMenu()" id="hamburger">
+        <div class="stickers">
+          <span id="div1menu"></span>
+          <span id="div2menu"></span>
+          <span id="div3menu"></span>
         </div>
+      </div>
     </header>
     <!-- Section 01 - Hello world-->
 
-    <nav id='hamb-navbar'>
-        <ul class="list menu">
-            <li>
-                <a class="active" href="#section1">Home</a>
-            </li>
-            <li>
-                <a href="#section2">Projetos</a>
-            </li>
-            <li>
-                <a href="#section3">Tecnologias</a>
-            </li>                
-            <li>
-                <a href="#section4">Nossa Equipe</a>
-            </li>
-            <li>
-                <a href="#section5">Contato</a>
-            </li>
-        </ul>
+    <nav id="hamb-navbar">
+      <ul class="list menu">
+        <li>
+          <a class="active" href="#section1">Home</a>
+        </li>
+        <li>
+          <a href="#section2">Projetos</a>
+        </li>
+        <li>
+          <a href="#section3">Tecnologias</a>
+        </li>
+        <li>
+          <a href="#section4">Nossa Equipe</a>
+        </li>
+        <li>
+          <a href="#section5">Contato</a>
+        </li>
+      </ul>
     </nav>
 
     <div class="hello-world" id="section1">
-        <h1>Hello, world!</h1>
+      <h1>Hello, world!</h1>
     </div>
 
     <!-- Section 02 - Links to Projects -->
     <div class="projects" id="section2">
-        <a href = "./projects/project01_ligue-4/ligue4.html" class="projects-item" id="project1">Ligue-4</a>
-        <a href = "#" class="projects-item" id="project2">Projeto 2</a>
-        <a href = "#" class="projects-item" id="project3">Projeto 3</a>
-        <a href = "#" class="projects-item" id="project4">Projeto 4</a>
+      <a
+        href="./projects/project01_ligue-4/ligue4.html"
+        class="projects-item"
+        id="project1"
+        >Ligue-4</a
+      >
+      <a href="#" class="projects-item" id="project2">Projeto 2</a>
+      <a href="#" class="projects-item" id="project3">Projeto 3</a>
+      <a href="#" class="projects-item" id="project4">Projeto 4</a>
     </div>
 
     <!-- Section 03 Technologies -->
     <div class="technologies" id="section3">
-        <h1>Technologias Principais</h1>
-        <ul class="technologies-box" >
-            <li class="technologies-box-item" id="technologies-html">HTML5</li>
-            <li class="technologies-box-item" id="technologies-css">CSS3</li>
-            <li class="technologies-box-item" id="technologies-js">JavaScript</li>
-        </ul>
+      <h1>Technologias Principais</h1>
+      <ul class="technologies-box">
+        <li class="technologies-box-item" id="technologies-html">HTML5</li>
+        <li class="technologies-box-item" id="technologies-css">CSS3</li>
+        <li class="technologies-box-item" id="technologies-js">JavaScript</li>
+      </ul>
     </div>
 
-    <!-- Section 04  Our Team-->
+    <!-- Section 04  Our Team -->
     
-        <div class="about-us-container" id="section4">
-            <h1>Nossa Equipe</h1>
-            <div class="about-us-container-profiles" id="profile1-wister">
-                <img src="images/profiles/wister.jpg"/>
-                <text>Wister</text>
+            <div class="contato">
+              Nome: Jhonatan<br />
+              E-mail: jhonatan.serafim@gmail.com<br />
+              Telefone: +55 (11) 95159-6731
             </div>
-            <div class="about-us-container-profiles" id="profile2-jean">
-                <img src="images/profiles/jean.jpg"/>
-                <text>Jean Jacques</text>
-            </div>
-            <div class="about-us-container-profiles" id="profile3-victor">
-                <img src="images/profiles/jean.jpg"/>
-                <text>Victor</text>
-            </div>
-            <div class="about-us-container-profiles" id="profile4-jhonatan">
-                <img src="images/profiles/jean.jpg"/>
-                <text>Jhonatan</text>
-            </div>
-            <div class="about-us-container-profiles" id="profile5-rodrigo">
-                <img src="images/profiles/jean.jpg"/>
-                <text>Rodrigo</text>
-            </div>
+
+            <div class="contato">
+              Nome: Rodrigo<br />
+              E-mail: rodrigoloha@gmail.com<br />
+              Telefone: +55 (41) 99764-4009
+              
             <div class="about-us-container-profiles" id="profile6-joao">
                 <img src="images/profiles/jean.jpg"/>
                 <text>João</text>
@@ -169,10 +164,11 @@
                             Telefone:
                         </div>
 
-                    </div>              
                 </div>
             </div>
-            
+          </div>
         </div>
+      </div>
+    </div>
   </body>
 </html>

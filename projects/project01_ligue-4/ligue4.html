@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../styles/main.css"/>
-        <link rel="stylesheet" href="./css/ligue4.css" />
-        <script src="./javascript/regras.js"></script>
-        <!-------------------------- Arquivos necessarios para as regras --------------------------------->
-        <link rel="stylesheet" href="./css/regras.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Langar&display=swap" rel="stylesheet">
-        <!-------------------------- FIM necessarios para as regras ------------------------------------->
-        <title>Ligue-4</title>
-    </head>
-    <body>
 
-        <header id="header">
-            <a id="header-logo" href="../../index.html"><img src="../../images/icons/code-angle-brackets.png"></a>
-            <h1 id='title'> Ligue-4 </h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="./css/ligue4.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <script src="./javascript/regras.js"></script>
+    <!-------------------------- Arquivos necessarios para as regras --------------------------------->
+    <link rel="stylesheet" href="./css/regras.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Langar&display=swap" rel="stylesheet" />
+    <!-------------------------- FIM necessarios para as regras ------------------------------------->
+    <title>Ligue-4</title>
+</head>
 
-            <!-------------------------------- Call de regras ------------------------------------------------------>
-            <button id='callRegras' onclick="callRegras()">Regras</button>
+<body>
+    <header id="header">
+        <a id="header-logo" href="../../index.html"><img src="../../images/icons/code-angle-brackets.png" /></a>
+        <h1 id="title">Ligue-4</h1>
+        <button id="btnReset">RESET</button>
 
-            <div id='container-rules-id' class="container-rules">
-                <button onclick='closeRegras()' id="botaorules">
-                    <div id="imgBtn">
-                        <img src="assets/xx.png" alt="Close rules">
-                    </div>
-                </button>
+        <!-------------------------------- Call de regras ------------------------------------------------------>
+        <button id="callRegras" onclick="callRegras()">Regras</button>
 
-                <h1>Regras</h1>
-                <ul id='rules'>
-                    <li>Os jogadores irão alternar entre si quem joga, em cada turno cada um solta uma pedra no tabuleiro
-                    </li>
+        <div id="container-rules-id" class="container-rules">
+            <button onclick="closeRegras()" id="botaorules">
+                <div id="imgBtn">
+                    <img src="./images/icons/xx.png" alt="Close rules" />
+                </div>
+            </button>
 
-                    <li>As pedras irão cair até onde for possível (Ou no chão ou em cima de outra pedra)
-                    </li>
+            <h1>Regras</h1>
+            <ul id="rules">
+                <li>
+                    Os jogadores irão alternar entre si quem joga, em cada turno cada um
+                    solta uma pedra no tabuleiro
+                </li>
 
-                    <li>O objetivo é ligar 4! Quem conseguir ligar uma linha de 4 pedras primeiro (na vertical, horizontal ou diagonal) vence!!
-                    </li>
+                <li>
+                    As pedras irão cair até onde for possível (Ou no chão ou em cima de
+                    outra pedra)
+                </li>
 
-                    <li>Divirta-se!
-                    </li>
-                </ul>
-            
-            </div>
-            <!-------------------------------- Fim de regras ------------------------------------------------------->
-        </header>
+                <li>
+                    O objetivo é ligar 4! Quem conseguir ligar uma linha de 4 pedras
+                    primeiro (na vertical, horizontal ou diagonal) vence!!
+                </li>
 
-        <!-- Colocar a id #containerGame no container principal se quiser que a div das regras apareça sozinha -->
-        <div id="containerGame">
-            
+                <li>Divirta-se!</li>
+            </ul>
         </div>
-    </body>
+        <!-------------------------------- Fim de regras ------------------------------------------------------->
+    </header>
+
+    <p class="blink" id="winner"></p>
+    <div id="containerGame">
+        <ul id="ul">
+            <img id="pipe" src="./images/icons/down-arrow.png" />
+
+            <li class="lis"></li>
+            <li class="lis"></li>
+            <li class="lis"></li>
+            <li class="lis"></li>
+            <li class="lis"></li>
+            <li class="lis"></li>
+            <li class="lis"></li>
+        </ul>
+        <script src="Class/Sounds.js"></script>
+        <script src="Class/Ball.js"></script>
+        <script src="Controller/Controller.js"></script>
+        <script src="src/js/config.js"></script>
+    </div>
+</body>
+
 </html>
